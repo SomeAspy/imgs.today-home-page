@@ -1,0 +1,229 @@
+/**
+ * Copyright (c) 2022 Aiden Baker
+ *
+ * This software is released under the MIT License.
+ * https://opensource.org/licenses/MIT
+ */
+
+@font-face {
+    font-family: Lexend Deca;
+    src: url('../fonts/LexendDeca-Regular.ttf');
+}
+
+html {
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Lexend Deca', sans-serif;
+}
+.slide1 {
+    background-image: url(../images/slide1.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.title {
+    font-size: 4vh;
+    color: #fff;
+    text-align: center;
+    margin-top: 50vh;
+    margin-left: auto;
+    transform: translateY(-50%);
+}
+
+.buttons {
+    position: absolute;
+    display: grid;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    grid-template-columns: auto auto auto auto;
+}
+
+.button {
+    background-color: #000;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    border-radius: 5px;
+    color: #fff;
+    font-size: 4vh;
+    padding: 1vw;
+    margin: 5vw;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    transform: scale(1.1);
+}
+.slide2 {
+    background-image: url(../images/slide2.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.featureTitle {
+    position: relative;
+    font-size: 3vw;
+    color: #fff;
+    text-align: center;
+    left: 50vw;
+    top: 20vh;
+    transform: translate(-50%, -50%);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1vw;
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 50vw;
+    top: 20vh;
+}
+.feature {
+    background-color: #000;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.5vw;
+    padding: 1vw;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    text-align: center;
+    text-overflow: wrap;
+    width: 30vw;
+    margin: auto;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+}
+.feature:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    transform: scale(1.1);
+}
+
+.slide3 {
+    background-image: url(../images/slide3.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 200%;
+    left: 0;
+}
+
+.users {
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.userElement {
+    border-radius: 25px;
+    width: 20vh;
+    height: 20vh;
+    text-align: center;
+    color: rgb(247, 247, 255);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    white-space: normal;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out;
+}
+.PFPElement {
+    margin: auto;
+    position: relative;
+    top: 60%;
+    left: 53%;
+    transform: translate(-100%, -100%);
+    width: 50%;
+    height: 50%;
+    border-radius: 100%;
+}
+.usernameElement {
+    margin-top: 15%;
+    margin-bottom: 15%;
+    font-size: 150%;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.userElement:hover {
+    transform: scale(1.05);
+}
+.online {
+    border: 3px solid #3aa55d;
+}
+.dnd {
+    border: 3px solid #dc3d40;
+}
+.idle {
+    border: 3px solid #eea019;
+}
+.offline {
+    border: 3px solid #747f8d;
+}
+
+@media only screen and (max-width: 600px) {
+    .featureTitle {
+        font-size: 3vh;
+    }
+    .users {
+        position: absolute;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 30px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 40%;
+    }
+    .userElement {
+        height: 20vh;
+        width: 30vw;
+    }
+    .PFPElement {
+        width: auto;
+        transform: translate(-68%, -100%);
+    }
+    .usernameElement {
+        font-size: 100%;
+    }
+    .feature {
+        width: 40vw;
+        height: 15vh;
+        font-size: 1.5vh;
+    }
+    .features {
+        grid-template-columns: auto;
+        grid-gap: 1vw;
+        top: 30%;
+    }
+    .buttons {
+        grid-template-columns: auto auto;
+        top: 20%;
+    }
+}
